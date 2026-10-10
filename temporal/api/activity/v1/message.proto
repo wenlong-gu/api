@@ -203,6 +203,9 @@ message ActivityExecutionInfo {
     // Indicates whether eager execution was requested for this activity and accepted by the server
     // for its first task.
     bool eager_execution_accepted = 40;
+
+    // The authenticated principal of the worker that most recently completed, failed, or canceled an activity task.
+    temporal.api.common.v1.Principal last_worker_principal = 41;
 }
 
 // Limited activity information returned in the list response.
